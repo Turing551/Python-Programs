@@ -1,0 +1,19 @@
+def swapElements(list, pos1, pos2):
+
+  list[pos1], list[pos2] = list[pos2], list[pos1]
+  return list
+  
+List = list(map(int, input().strip().split()))
+pos1 = int(input())
+pos2 = int(input())
+
+print(swapElements(List, pos1-1, pos2-1))
+
+#Approach 2  Using Tuple Variable 
+
+#Storing the two elements as a pair in a tuple variable
+
+def swapElements(list, pos1, pos2):
+  get = list[pos1], list[pos2]
+  list[pos2], list[pos1] = get
+  return list
